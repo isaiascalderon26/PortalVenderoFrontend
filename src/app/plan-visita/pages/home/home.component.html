@@ -1,0 +1,66 @@
+<mat-sidenav-container fullscreen>
+  <mat-sidenav #sidenav mode="push">
+    <mat-toolbar color="#000000">
+      <span>Vendedores</span>
+      <span class="spacer"></span>
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </mat-toolbar>
+
+    <mat-nav-list>
+      <!-- <a routerLink="./home" mat-list-item (click)="sidenav.toggle()">
+        <mat-icon mat-list-icon>home</mat-icon>
+        <span>Inicio</span>
+      </a-->
+      <a routerLink="./mostrar" mat-list-item (click)="sidenav.toggle()" >
+        <mat-icon mat-list-icon>location_on</mat-icon>
+        <span>Plan Visita</span>
+      </a>
+
+      <a routerLink="./clientes" mat-list-item (click)="sidenav.toggle()">
+        <mat-icon mat-list-icon>store_mall_directory</mat-icon>
+        <span>Mis Clientes</span>
+      </a>
+
+      <a routerLink="./gestion-vendedor" mat-list-item (click)="sidenav.toggle()">
+        <mat-icon mat-list-icon>today</mat-icon>
+        <span>Gestión Vendedor</span>
+      </a>
+
+      <a routerLink="./marketing" mat-list-item (click)="sidenav.toggle()">
+        <mat-icon mat-list-icon>devices</mat-icon>
+        <span>Marketing</span>
+      </a>
+
+      <a *ngIf="isAdmin" routerLink="./administration" mat-list-item (click)="sidenav.toggle()">
+        <mat-icon mat-list-icon>settings</mat-icon>
+        <span>Administración</span>
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <div fxLayout="row wrap">
+    <mat-toolbar>
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <div>
+        <img
+          class="logo-andina"
+          src="../../../../assets/media/cocacola-andina.png"
+        />
+      </div>
+      <span class="spacer"></span>
+      <button mat-button (click)="onLogout()">Logout</button>
+      <button mat-button>
+        <mat-icon>search</mat-icon>
+      </button>
+      <!--button mat-button>
+        <mat-icon>notifications_none</mat-icon>
+      </button-->
+    </mat-toolbar>
+  </div>
+  <div class="container-lg">
+    <router-outlet></router-outlet>
+  </div>
+</mat-sidenav-container>

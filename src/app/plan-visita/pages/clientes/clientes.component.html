@@ -1,0 +1,73 @@
+<div fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="center" fxLayoutGap="20 px" *ngIf="!noData; else noDataContainer">
+  <div fxFlex="95">
+    <div class="
+        row-cols-1 row-cols-md-1
+        g-4
+        mt-3
+        mb-5
+        row
+        align-items-center
+        justify-content-center
+      ">
+      <h1 class="name mt-3">Mis Clientes</h1>
+    </div>
+    <div class="row mb-3">
+      <div fxFlex="95">
+        <div class="col">
+          <form (ngSubmit)="buscar()" autocomplete="off">
+            <input type="text" name="busquedad" class="form-control control-frm" [(ngModel)]="busquedad"
+              placeholder="Buscar Cliente.." />
+          </form>
+        </div>
+
+      </div>
+      <div *ngIf="hayError" class="alert alert-danger">
+        Ups! sin resultados, intenta nuevamente más tarde {{busquedad}}
+      </div>
+    </div>
+  </div>
+  <div class="row mb-3">
+    <div fxFlex="95">
+      <div *ngIf="!hayError" class="
+      row-cols-1 row-cols-md-1
+      g-4
+      mt-2
+      mb-5
+      row
+      align-items-center
+      justify-content-center
+    ">
+        <div fxFlex="95" *ngFor="let planVisita of body">
+          <app-cliente-tarjeta [body]="planVisita"></app-cliente-tarjeta>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<ng-template #noDataContainer>
+  <div fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="center" fxLayoutGap="20 px">
+    <div fxFlex="95">
+      <div class="
+          row-cols-1 row-cols-md-1
+          g-4
+          mt-3
+          mb-5
+          row
+          align-items-center
+          justify-content-center
+        ">
+        <h1 class="name mt-3">Mis Clientes</h1>
+      </div>
+      <div class="row mb-3">
+        <div fxFlex="95">
+          <div class="col">
+            <h1 class="error-first">Ups!</h1>
+            <h2 class="error-second">
+              No encontramos clientes para esta ruta
+            </h2>
+          </div>  
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>

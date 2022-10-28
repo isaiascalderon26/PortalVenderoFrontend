@@ -1,0 +1,33 @@
+.match-parent {
+    height: 40vh;
+    border-radius: 5px;
+    background-color: #e2d8d8b2;
+  }
+
+.list-group{
+    position: absolute;
+    top: 176px;
+    right: 60px;
+    z-index: 99;
+}
+li{
+  cursor: pointer;
+}
+.marker{
+  background-image: url('https://e1.pngegg.com/pngimages/205/977/png-clipart-hipge-12-coca-cola-bottle-crate-art.png');
+  background-size: cover;
+  width: 20px;
+  height: 20px;
+  border-radius: 20%;
+  cursor: pointer;
+}
+
+.row{
+  background-color: white;
+  border-radius: 5px;
+  bottom: 135px;
+  left: 225px;
+  padding: 10px;
+  position: fixed;
+  z-index: 999;
+}

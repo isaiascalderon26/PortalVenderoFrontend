@@ -1,0 +1,421 @@
+{
+  "COUNTRY": "Brasil",
+  "TITLE": "Titulo de Brasil",
+  "RETURN": "Voltar",
+  "CONTINUE": "Continuar",
+  "ORDER_STATUS": {
+    "CREATED": "Inserido",
+    "DELIVERED": "Inserido",
+    "FAILED": "Inserido",
+    "REGISTERED": "Inserido",
+    "PREPARING": "Em preparação",
+    "TRANSIT": "Em trânsito",
+    "DELIVERED_CLT": "Entregue",
+    "RETURNED": "Devolvido",
+    "BLOCKED": "Bloqueado",
+    "CANCELLED": "Cancelado"
+  },
+  "LOADINGS": {
+    "GET_DISCOUNTS": "Estamos buscando tus promociones"
+  },
+  "LOGIN": {
+    "HOME": {
+      "SIGN_IN": {
+        "TITLE": "Já sou cadastrado. Entrar!",
+        "SUBTITLE": "Entre e realize seus pedidos"
+      },
+      "SIGN_UP": {
+        "TITLE": "Quero me cadastrar",
+        "SUBTITLE": "Se já é nosso cliente, crie sua conta em poucos passos"
+      },
+      "NEW_CLIENT": {
+        "TITLE": "Quero ser cliente",
+        "SUBTITLE": "Ainda não é cliente? Te convidamos a ser cliente Coca-Cola Andina"
+      },
+      "LEGALS": "Políticas de Privacidade"
+    },
+    "SIGN_IN": {
+      "CHOOSE_USER": {
+        "TITLE": "Como você quer entrar?",
+        "EMAIL_BUTTON": "E-mail",
+        "PHONE_BUTTON": "Telefone",
+        "FOOTER": "Quero me cadastrar"
+      },
+      "USER_EMAIL": {
+        "TITLE": "Para começar, digite seu e-mail",
+        "PLACEHOLDER": "nome@exemplo.com",
+        "REMEMBER_EMAIL": "Lembrar meu e-mail",
+        "BUTTON": "Continuar"
+      },
+      "USER_PHONE": {
+        "TITLE": "Para comerçar, digite seu número de telefone",
+        "CODES": "+55,+54,+56,+594",
+        "PLACEHOLDER": "Telefone",
+        "BUTTON": "Continuar"
+      },
+      "ENTER_PWD": {
+        "TITLE": "Olá {{loginUser.firstName}}, digite sua senha",
+        "SUBTITLE_EMAIL": "Está entrando com e-mail {{loginUser.email}}",
+        "SUBTITLE_PHONE": "Está entrando com o número {{loginUser.phone}}",
+        "PLACEHOLDER": "Senha",
+        "REMEMBER_PWD": "Lembrar minha senha",
+        "SHOW_PWD": "Mostrar Senha",
+        "HIDE_PWD": "Esconder a Senha",
+        "ENTER": "Entrar",
+        "FORGOT_PWD": "Esqueci minha senha",
+        "USE_ANOTHER_EMAIL": "Usar outro e-mail",
+        "USE_ANOTHER_PHONE": "Usar outro telefone "
+      },
+      "CONFIRM_CODE": {
+        "TITLE": "Hola {{loginUser.firstName}},\n no pudimos autenticar tu email",
+        "SUBTITLE": "Te enviamos un nuevo un código para verificarlo a {{loginUser.email}}",
+        "LINK_RESEND": "Volver a enviar código",
+        "BUTTON_CONFIRM": "Autenticar email e ingresar"
+      },
+      "RESTORE_PWD_CHOOSE": {
+        "TITLE": "Como você quer recuperar sua senha?",
+        "RESTORE_WITH_EMAIL": "E-mail",
+        "RESTORE_WITH_PHONE": "Telefone",
+        "FOOTER": "Já lembrei minha senha"
+      },
+      "RESTORE_WITH_EMAIL": {
+        "TITLE": "Digite o e-mail que você utilizou para se cadastrar",
+        "PLACEHOLDER": "nome@exemplo.com",
+        "RESTORE_BUTTON": "Recuperar minha senha"
+      },
+      "RESTORE_WITH_EMAIL_CONFIRM": {
+        "TITLE": "Enviamos um e-mail para {{loginUser.restoreEmail}} para recuperar sua senha",
+        "GO_BACK_BUTTON": "Voltar ao ínicio"
+      },
+      "RESTORE_WITH_PHONE": {
+        "TITLE": "Digite o número de telefone que utilizou para se cadastrar",
+        "PLACEHOLDER": "Telefone",
+        "RESTORE_WITH_SMS": "Enviar código por SMS",
+        "RESTORE_WITH_WHATSAPP": "Enviar código por WhatsApp"
+      },
+      "RESTORE_WITH_SMS": {
+        "TITLE": "Digite o código recebido por SMS",
+        "SUBTITLE": "Enviamos um código para o número de telefone {{loginUser.restorePhone}}",
+        "RESEND_SMS": "Reenviar SMS",
+        "USE_ANOTHER_PHONE": "Corrigir meu número de telefone",
+        "RESTORE_BUTTON": "Redefinir minha senha"
+      },
+      "RESTORE_WITH_WHATSAPP": {
+        "TITLE": "Digite o código recebido por WhatsApp",
+        "RESEND_SMS": "Reenviar WhatsApp",
+        "USE_ANOTHER_PHONE": "Corrigir meu número de telefone",
+        "RESTORE_BUTTON": "Redefinir minha senha"
+      },
+      "RESTORE_PWD": {
+        "TITLE": "Digite sua nova senha",
+        "LABEL": "Deve ter no mínimo 8 caracteres",
+        "PLACEHOLDER": "Senha",
+        "REMEMBER_PWD": "Lembrar minha senha",
+        "SHOW_PWD": "Mostrar Senha",
+        "HIDE_PWD": "Esconder a Senha",
+        "ENTER": "Entrar"
+      }
+    },
+    "SIGN_UP": {
+      "LEGALS": {
+        "TITLE": "Para criar sua conta, vamos solicitar alguns dados",
+        "CHECK": "Aceitar termos de usos  e condições",
+        "SIGN_IN": "Quero me cadastrar"
+      },
+      "FIRST_NAME": {
+        "TITLE": "Primero, ingresá tu nombre",
+        "PLACEHOLDER": "Nombre"
+      },
+      "LAST_NAME": {
+        "TITLE": "Ahora, ingresá tu apellido",
+        "PLACEHOLDER": "Apellido"
+      },
+      "EMAIL": {
+        "TITLE": "Para começar, digite seu email",
+        "PLACEHOLDER": "nome@exemplo.com"
+      },
+      "PHONE": {
+        "TITLE": "Agora, seu número de telefone",
+        "CODES": "+55,+54,+56,+594",
+        "PLACEHOLDER": "Telefone",
+        "REGEX": "^[0-9]{8,10}$",
+        "REGEX_MSG": "O número de telefone deve ter entre 8 e 10 caracteres"
+      },
+      "ID": {
+        "TITLE": "Agora digite seu CNPJ ou CPF",
+        "PLACEHOLDER": "CNPJ ou CPF",
+        "REGEX": "^[0-9]{11,14}$",
+        "REGEX_MSG": "CNPJ ou CPF deve ter entre 8 e 10 caracteres"
+      },
+      "CLIENT_NUMBER": {
+        "TITLE": "Já estamos quase terminado, seu número de cliente Andina",
+        "PLACEHOLDER": "Número de cliente",
+        "HELP": "Onde te encontro?"
+      },
+      "PASSWORD": {
+        "TITLE": "Sua senha",
+        "SUBTITLE": "Deve ter no mínimo 8 caracteres",
+        "PLACEHOLDER": "Senha",
+        "REMEMBER_PWD": "Recordar minha senha",
+        "SHOW_PWD": "Mostrar Senha",
+        "HIDE_PWD": "Esconder a Senha",
+        "SIGN_UP_BUTTON": "Cadastrar e entrar",
+        "TOOLTIP": "La contraseña debe tener mayúsculas, minúsculas, numeros, un símbolo y al menos 8 caracteres.",
+        "RE_SEND_CODE": "Volver a enviar"
+      }
+    },
+    "NEW_CLIENT": {
+      "TITLE": "Quero ser cliente \n Coca-Cola Andina",
+      "BUTTON": "Fale com nossa Central de Relacionamentos",
+      "PHONE": "0800 0235 338",
+      "LINK": "centralderelacionamento@koandina.com"
+    }
+  },
+  "HOME": {
+    "MY_PROFILE": "Mi Perfil",
+    "CLIENT_SELECTED": "Tu local seleccionado es:",
+    "SEARCH": "Buscar…",
+    "SUGGESTED": "Sugerimos esses produtos",
+    "PROMOS": "Ver Combos e Promoções ",
+    "REPEAT_ORDER": "Repetir meu pedido",
+    "MY_ORDER": {
+      "LABEL": "Status do meu último pedido",
+      "DATE": "Data de entrega",
+      "STATUS": {
+        "PENDING": "Ingressado",
+        "ON_WAY": "Em preparação",
+        "PROCESSING": "A caminho",
+        "DELIVERED": "Entregue",
+        "RETURNED": "Retornado",
+        "BLOCKED": "Bloqueado",
+        "CANCELED": "Cancelado"
+      },
+      "QUANTITY": "Quantidade",
+      "TOTALS": "Valor Total:",
+      "BUTTON": "Ver outros pedidos"
+    },
+    "MY_STORES": "Ver meus negócios",
+    "HELP": "Central de ajuda",
+    "COVID": {
+      "TITLE": "Protocolo COVID-19",
+      "TEXT": "Conheça nossas medidas e protocolos"
+    },
+    "COOKIES": "Esta página utiliza cookies e outras tecnologias para que possamos melhorar sua experiência em nossos sites",
+    "BUTTON": {
+      "ACCEPT": "Aceitar"
+    },
+    "START": "Início",
+    "MY_ORDERS": "Meus Pedidos",
+    "NEW_ORDER": "Novo Pedido",
+    "MY_BILLS": "Meus Boletos",
+    "MY_WALLET": "Meu Saldo",
+    "MY_STORES_SELECT": "Escolha seu negócios",
+    "MY_DELIVERY_DATES_SELECT": "Tu próxima fecha de entrega",
+    "SIGN_OUT": "Encerrar Sessão",
+    "ROLE": "Administrador",
+    "STATUS": {
+      "OK": "Sua conta está em dia",
+      "BLOCKED": "Sua conta está bloqueada",
+      "PENDING": "Sua conta tem débitos pendentes"
+    },
+    "CLIENT": {
+      "LABEL": "Número do Cliente",
+      "ID": "CNPJ ou CPF",
+      "PHONE": "Telefone",
+      "EMAIL": "E-mail",
+      "ROL": {
+        "Buyer": "Comprador",
+        "Administrator": "Administrador"
+      }
+    },
+    "MY_ACCOUNT": {
+      "MANAGE": "Gerenciar usuários",
+      "CHANGE_PASSWORD": "Alterar senha",
+      "EDIT": "Editar dados de contato"
+    }
+  },
+  "MY_ORDERS": {
+    "STATUS": {
+      "created": "Ingresado",
+      "pending": "En tránsito",
+      "canceled": "Cancelado",
+      "returned": "Retornado",
+      "blocked": "Bloqueado",
+      "delivered": "Entregado"
+    }
+  },
+  "NEW_ORDER": {
+    "STEPS": {
+      "DATE": "Data da entrega",
+      "SUGGESTED": "Pedido Sugerido",
+      "ORDER": "Pedido",
+      "DETAIL": "Detalhe",
+      "CONFIRMATION": "Confirmação"
+    },
+    "DELIVERY_PLAN": {
+      "LABEL": "Sua próxima data de entrega é {{date}}",
+      "PLACEHOLDER": "dd/mm/aaaa",
+      "ADVICE": "Confirme seu pedido hoje até às {{deadline}} hs para recebê-lo na data programada. Caso realize seu pedido depois deste horário, a data de entrega pode sofrer alterações.",
+      "BUTTON": "Iniciar meu pedido"
+    },
+    "SUGGESTED_PRODUCTS": {
+      "TITLE": "Sugerimos esses produtos para você",
+      "SUBTITLE": "Os produtos e as quantidades foram sugeridos pelo seu histórico de compras",
+      "SUGGESTED": "Sugerimos",
+      "BUTTON": "Adicionar todos os produtos ao meu pedido",
+      "QUESTION": "O que mais você deseja adicionar?",
+      "PROMOS": "Combos e Promoções",
+      "PRODUCTS": "Portfólio Completo"
+    },
+    "DISCOUNTS": {
+      "OPEN": {
+        "LABEL": "¡Elegí tus productos!",
+        "BUTTON": "Elegir"
+      },
+      "SCALE": {
+        "NO_DISCOUNT_LABEL_1": "Agregando {{scale.min}} o más cajas, tiene {{scale.reward.value}} % de descuento",
+        "DISCOUNT_LABEL_PACK": "Agregando de {{scale.min}} a {{scale.max}} cajas de cualquier producto, tiene {{scale.reward.value}} % de descuento",
+        "DISCOUNT_LABEL_UNIT": "Agregando de {{scale.min}} a {{scale.max}} cajas, tiene {{scale.reward.value}} % de descuento",
+        "PRE_DISCOUNT": "Agregando dos más, tiene mayor ahorro",
+        "DISCOUNT_LABEL_UNLIMITED": "{{scale.reward.value}} % de descuento en las todas las cajas elegidas"
+      }
+    },
+    "RIGHT_SIDEBAR": {
+      "AVAILABLE_CREDITS": "Créditos disponíveis",
+      "NON_ALCOHOL_DRINK": "Bebidas sem álcool",
+      "ALCOHOL_DRINKS": "Bebidas com álcool",
+      "RUNNING_OUT_OF_CREDIT": "Você está ficando sem crédito disponível",
+      "NON_ALCOHOL_CART": "Meu Pedido sem álcool ",
+      "ALCOHOL_CART": "Meu Pedido com álcool ",
+      "NOT_ADDED_PRODUCTS": "Você ainda não adicionou produtos ao seu pedido",
+      "BOXES": "Caixas",
+      "BOX": "Caixa",
+      "ALCOHOL_SUBTOTAL": "Subtotal com álcool",
+      "NON_ALCOHOL_SUBTOTAL": "Subtotal sem álcool",
+      "SAVING": "Desconto",
+      "DELIVERY": "Frete",
+      "TAXES": "Imposto",
+      "TOTAL": "Total",
+      "SUBTOTAL": "Subtotal",
+      "SUBTOTAL_NO_TAXES": "Subtotal sin impuestos",
+      "END": "Finalizar Pedido",
+      "END_ADVICE": "Você deve adicionar produtos para finalizar seu pedido",
+      "BUTTON": {
+        "PROMOS": "Adicionar combos e promoções",
+        "SIMPLE": "Adicionar por portfólio completo"
+      }
+    },
+    "MORE_PRODUCTS": {
+      "FILTER": {
+        "JUICE": "Suco",
+        "FLAVOR_WATER": "Água Saborizada",
+        "WATER": "Água",
+        "ALCOHOL": "Álcool",
+        "WINE": "Vinho",
+        "ENERGIZER": "Energético",
+        "SIDER": "Sidra",
+        "SODA": "Refrigerante, Cerveja, Proteína, Isotônico"
+      },
+      "SORTER": {
+        "NON_RETORNABLE": "Não Retornável",
+        "RETORNABLE": "Retornável"
+      },
+      "SELECT": {
+        "PACKAGE": "Embalagem",
+        "FORMAT": "Tamanho",
+        "BRAND": "Marca",
+        "ORDER_BY": "maior desconto"
+      },
+      "VIEW": {
+        "GRID": "Rede",
+        "TABLE": "Tabela"
+      }
+    },
+    "ORDER_DETAIL": {
+      "ADD": "Adicionar",
+      "DELIVERY_DATE": "Data da Entrega",
+      "QUANTITY": "Quantidade de vasilhames a serem entregues 20 caixas",
+      "PAYMENT_METHOD": {
+        "LABEL": "Meio de pagamento",
+        "CASH": "Efectivo",
+        "CREDITO": "Crédito",
+        "CHEQUE": "Cheque"
+      },
+      "NON_ALCOHOL_SUBTOTAL": "Subtotal sem álcool",
+      "ALCOHOL_SUBTOTAL": "Subtotal com álcool",
+      "SAVINGS": "Desconto",
+      "DELIVERY": "Frete",
+      "TAXES": "Imposto",
+      "BUTTON": {
+        "KEEP_BUYING": "Continuar comprando",
+        "GO_TO_SUGGESTED_PRODUCTS": "Ir para pedido sugerido",
+        "END_ORDER": "Finalizar e enviar pedido",
+        "SAVE": "Guardar como rascunho"
+      }
+    },
+    "ORDER_CONFIRMATION": {
+      "TITLE": "Seu pedido #{{id}} foi enviado com sucesso",
+      "BUTTON": "Ver pedidos em andamento",
+      "GO_HOME": "Voltar ao ínicio",
+      "PHONE": "+ 55 0800 0235 338",
+      "EMAIL": "centralderelacionamento@koandina.com"
+    }
+  },
+  "ERRORS": {
+    "UserNotFoundException": "Email no está registrado",
+    "NotAuthorizedException": "Usuario no autorizado",
+    "InvalidPasswordException": "Contraseña inválida",
+    "UserNotConfirmedException": "Usuario no confirmado",
+    "ExpiredCodeException": "El código expiró, por favor vuelva a generarlo",
+    "CodeMismatchException": "El código es inválido o esta expirado, por favor intente nuevamente",
+    "UsernameExistsException": "El usuario ya existe",
+    "UserLambdaValidationException": "Error inesperado del sistema",
+    "LimitExceededException": "Se superó el límite de intentos, intente luego de un tiempo",
+    "TooManyRequestsException": "Se superó el límite de intentos, intente luego de un tiempo",
+    "InvalidParameterException": "Los datos enviados no son válidos",
+    "InvalidParameterException_SendCode": "No se puede cambiar la contraseña del email enviado",
+    "CodeDeliveryFailureException": "Ocurrió un error al enviar el código de verificación",
+
+    "INVALID_PASSWORD": "Contraseña inválida",
+    "UNKNOWN_ERROR": "Error inesperado del sistema",
+    "EMAIL_NOT_FOUND": "Email no está registrado",
+    "PHONE_NOT_FOUND": "Teléfono no se encuentra en la base de datos",
+    "EMAIL_FORMAT_ERROR": "El formato del email es inválido",
+
+    "GET_USER_NAME": "Email no está registrado",
+    "GET_USER_INFO": "Ocurrió un error inesperado al cargar los datos del usuario",
+    "UPDATE_USER_PWD": "Ocurrió un error al cambiar la contraseña. Intente nuevamente.",
+    "POST_USER": "Ocurrió un error al registrar el usuario. Intente nuevamente.",
+    "GET_VISIT_PLAN": "No se encontraron fechas de entrega para el cliente seleccionado",
+    "GET_ORDERS_HISTORY": "No se encontraron pedidos para el cliente seleccionado",
+    "GET_ORDER_DETAIL": "En este momento no se puede cargar el detalle del pedido",
+    "GET_PORTFOLIO_PROD": "En este momento no se pueden cargar los productos",
+    "GET_SUGGESTED_PROD": "En este momento no se pueden cargar los productos sugeridos",
+    "GET_DISCOUNTS_PROD": "En este momento no se pueden cargar los combos y promociones",
+    "GET_PROD_FILTERS": "En este momento no se pueden cargar los filtros de búsqueda",
+    "GET_PROD_LABELS": "En este momento no se pueden cargar las etiquetas de búsqueda",
+    "POST_PARTIAL_ORDER": "Ocurrió un error al agregar el producto al carrito. Intente nuevamente.",
+    "POST_ORDER": "Ocurrió un error al generar el pedido. Intente nuevamente.",
+
+    "Unauthorized": "La sesión se encuentra vencida",
+
+    "50": "Error inesperado del sistema",
+    "100": "No se encontraron fechas de entrega para el cliente seleccionado",
+
+    "1100": "El cliente no existe",
+
+    "2001": "El email ya existe",
+    "2002": "Contraseña inválida",
+    "2003": "La contraseña es obligatoria",
+    "2004": "El nombre es inválido",
+    "2005": "El nombre es obligatorio",
+    "2006": "El apellido es inválido",
+    "2007": "El apellido es obligatorio",
+    "2008": "El email es inválido",
+    "2009": "El email es obligatorio",
+    "2010": "El teléfono es inválido",
+    "2011": "El teléfono es obligatorio",
+    "2014": "El cliente es obligatorio",
+    "2100": "Ocurrió un error al registrar el usuario"
+  }
+}

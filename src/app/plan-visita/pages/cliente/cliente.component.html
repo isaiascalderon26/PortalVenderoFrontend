@@ -1,0 +1,36 @@
+<div
+  class="
+    row-cols-1 row-cols-md-1
+    g-4
+    mt-2
+    mb-5
+    row
+    align-items-center
+    justify-content-center
+  "
+>
+  <mat-grid-list cols="1" *ngIf="!body; else divBody">
+    <mat-grid-tile>
+      <mat-spinner></mat-spinner>
+    </mat-grid-tile>
+  </mat-grid-list>
+  <ng-template #divBody>
+    <!--mat-tab-group>
+      <mat-tab label="Datos Cliente"> 
+        <app-lista (planVisitaOutput)="getOutput($event)"></app-lista> 
+      </mat-tab>
+      <mat-tab label="Historial">
+        <app-historial-pedidos [planVisita]="planVisitas"></app-historial-pedidos>
+      </mat-tab>
+    </mat-tab-group-->
+    <div class="btn-group" role="group" aria-label="Basic example">
+      <button (click)="displayApp(item.id)" type="button" class="btn btn-secondary btns-class" *ngFor="let item of tabsToApps" >{{ item.label }}</button>
+    </div>
+  </ng-template>
+  <span [ngSwitch]="appToshow">
+    <app-lista *ngSwitchCase="'clientData'" (planVisitaOutput)="getOutput($event)"></app-lista>
+    <app-historial-pedidos *ngSwitchCase="'history'" [planVisita]="planVisitas"></app-historial-pedidos>
+    <app-precio-pomocion *ngSwitchCase="'promotion'"></app-precio-pomocion>
+    <app-lista *ngSwitchDefault (planVisitaOutput)="getOutput($event)"></app-lista>
+  </span>
+</div>

@@ -1,0 +1,18 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - echo Installing npm...
+      - npm install -g @angular/cli
+      - npm install --save
+  build:
+    commands:
+      - echo Building...
+      - npm run build:develop
+artifacts:
+  files:
+    - 'index.html'
+    - '**/*'
+  discard-paths: no
+  base-directory: dist/vendedores

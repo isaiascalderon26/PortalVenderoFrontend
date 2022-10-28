@@ -1,0 +1,80 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div (click)="goBack()" style="cursor: pointer;">
+                <span class="material-icons" style="vertical-align: bottom;">arrow_back</span>
+                <span>Volver al historial de pedidos</span>
+            </div>            
+            <div class="card" *ngIf="orderDetailList !== undefined; else errorContainer">
+                <div class="card-header">
+                    <h4>Pedido <strong>#{{ orderId }}</strong></h4>
+                </div>
+                <div class="card-body">
+                    <div class="accordion-item item-accord" *ngFor="let data of orderDetailList; let i = index">
+                        <div class="row">
+                            <table class="table table-borderless">
+                                <thead>
+                                    <tr class="text-center">
+                                        <th>Cantidad</th>
+                                        <th>Código Producto</th>
+                                        <th>Descripción</th>
+                                        <th>Precio Unitario</th>
+                                        <th>Subtotal</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="text-center">
+                                        <td class="th-td-first">{{data.quantity}}</td>
+                                        <td>{{data.erpProductId | number}}</td>
+                                        <td>{{data.description}}</td>
+                                        <td>${{data.unitPrice | number : '1.2-2' }}</td>
+                                        <td class="th-td-last">${{data.unitSubTotal | number : '1.2-2'}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>                        
+                    </div>
+                    <div class="accordion-item item-accord row">
+                        <div class="row">
+                            <div class="col-6 col-med">
+                                <strong>Subtotal sin impuestos</strong>
+                            </div>
+                            <div class="col-6 col-med" style="text-align: right;">
+                                ${{accountObject.subtotal | number : '1.2-2' }}
+                            </div>
+                            <div class="col-6 col-med">
+                                <strong>Descuento total</strong>
+                            </div>
+                            <div class="col-6 col-med" style="text-align: right;">
+                                - ${{accountObject.discounts | number : '1.2-2' }}
+                            </div>
+                            <div class="col-6 col-med-imp">
+                                <strong>Impuestos</strong>
+                            </div>
+                            <div class="col-6 col-med-imp" style="text-align: right;">
+                                ${{accountObject.taxes | number : '1.2-2' }}
+                            </div>
+                            <div class="col-6 col-med">
+                                <strong>Total</strong>
+                            </div>
+                            <div class="col-6 col-med" style="text-align: right;">
+                                ${{accountObject.total | number : '1.2-2' }}
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <ng-template #errorContainer>
+                <div class="row">
+                    <div class="col-12 error-col">
+                        <h1 class="error-first">Ups!</h1>
+                        <h2 class="error-second">
+                          No pudimos ubicar el detalle de este pedido o no existe
+                        </h2>
+                    </div>
+                </div>
+            </ng-template>
+        </div>
+    </div>
+</div>

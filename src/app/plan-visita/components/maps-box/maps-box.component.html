@@ -1,0 +1,39 @@
+<div fxFlex="100">
+
+<ul class="list-group">
+    <li class="list-group-item list-group-item-info"
+        (click)="agregarMarcador()">
+        + Agregar
+    </li>
+    <li class="list-group-item"
+        *ngFor="let marcador of marcadores; let i = index"
+        (click)="irMarcador(marcador.marker!)"
+        (dblclick)="borrarMarcador( i )"
+        [ngStyle]="{'background-color': marcador.color}"
+        >
+        Cliente {{ i + 1 }}
+    </li>
+</ul>
+
+<div #mapa class="match-parent"></div>
+</div>
+<!-- 
+<div class="row">
+    <div class="col-12">
+        <label class="form-label">
+            zoom: 16
+            - Lng,Lat : [123,456]
+        </label>
+        <input type="range" class="form-range">
+    </div>
+    <div class="col-12">
+        <button class="btn btn-dark"
+                (click)="zoomOut()">
+            -
+        </button>
+        <button class="btn btn-dark float-end"
+                (click)="zoomIn()">
+            +
+        </button>
+    </div>
+</div> -->

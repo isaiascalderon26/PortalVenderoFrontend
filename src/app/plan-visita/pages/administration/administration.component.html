@@ -1,0 +1,54 @@
+<div class="containger-lg">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="header-bo"> Back Office </h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <ul class="nav nav-pills nav-fill">
+                <li [ngClass]="item.id === selectedId ? 'nav-item active' : 'nav-item'" *ngFor="let item of tabsToApps" (click)="showSetting(item.id)">{{ item.label }}                    
+                </li>
+            </ul>
+        </div>
+    </div>    
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card text-center">
+                <div class="card-header">
+                    <h1 class="card-head"> {{ tabsToApps[selectedId].label}} </h1>
+                </div>                
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-1">                  
+                            <label class="switch">
+                                <input type="checkbox" #checkOne (change)="selectedFileLoad(0, $event)" [(ngModel)]="checkFile1">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="head-files"> Cargar archvio de promociones </div>
+                            <input type="file" class="form-control" #fileOne placeholder="Buscar" accept="application/pdf, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" 
+                            (change)="filesSelected(0, $event)" [disabled]="!fileOneCheked">
+                        </div>
+                        <div class="col-md-1">                  
+                            <label class="switch">
+                                <input type="checkbox" #checkTwo (change)="selectedFileLoad(1, $event)" [(ngModel)]="checkFile2">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="head-files"> Cargar archvio seguimiento de concurso </div>
+                            <input type="file" class="form-control" #fileTwo placeholder="Buscar" accept="application/pdf, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" 
+                            (change)="filesSelected(1, $event)" [disabled]="!fileTwoCheked">
+                            <!--button type="button" class="btn bttn-load" [disabled]="!fileTwoLoad" >Cargar Archivo</button -->
+                        </div>
+                        <div class="col-md-12">
+                            <button type="button" class="btn bttn-load" [disabled]="!buttonActivated" (click)="loadFileToBucket()">Cargar Archivos</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

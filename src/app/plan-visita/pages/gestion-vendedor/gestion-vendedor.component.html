@@ -1,0 +1,21 @@
+<div class="container-xl">
+    <mat-tab-group>
+        <mat-tab *ngFor="let report of reports;" [label]="report.name"> 
+            <ng-template matTabContent>
+                <div class="mat-tab-shadow-container">
+                    <div class="mat-tab-shadow">
+                    </div>
+                </div>
+                <div class="tab-content">
+                    <app-gestion *ngIf="report.application === 'app-gestion'"></app-gestion>
+                    <app-cliente-remunerativo *ngIf="report.application === 'app-cliente-remunerativo'"></app-cliente-remunerativo>
+                    <app-reporte-volumen *ngIf="report.application === 'app-reporte-volumen'"></app-reporte-volumen>
+                    <app-report-vol-global *ngIf="report.application === 'app-report-vol-global'"></app-report-vol-global>
+                    <app-reporte-fde-detalle *ngIf="report.application === 'app-reporte-fde-detalle'"></app-reporte-fde-detalle>
+                    <app-report-vol-parcial *ngIf="report.application === 'app-report-vol-parcial'"></app-report-vol-parcial>
+                </div>
+            </ng-template>
+        </mat-tab>
+    </mat-tab-group>
+</div>
+

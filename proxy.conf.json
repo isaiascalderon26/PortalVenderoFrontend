@@ -1,0 +1,7 @@
+{
+    "/ctd_visitas/*":{
+        "target":"https://fibj7vtode.execute-api.us-east-1.amazonaws.com",
+        "secure":false,
+        "changeOrigin": true
+    }
+}

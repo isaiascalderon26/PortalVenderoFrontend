@@ -1,0 +1,30 @@
+
+<div class="card">
+  <div class="card-body">
+    <h3 class="card-title"><strong>{{ body.txtmd }}</strong></h3>
+    <h4 class="card-subtitle card-subtitle-main">{{ body.kunnr }}  
+      <span *ngIf="body.erdat !== '0'"> 
+        - <strong class="fontColor">Nuevo</strong>
+      </span> 
+    </h4>
+  </div>
+</div>
+<!--mat-card>
+    <mat-card-header>
+      <mat-card-title>
+        {{ body.txtmd }} 
+      </mat-card-title>
+      <mat-card-subtitle>
+        <h4><strong>{{ body.kunnr}} - {{body.plan}} </strong></h4> 
+      </mat-card-subtitle>
+      <mat-card-content align="end">
+        <h4 class="fontColor"><strong>{{ body.erdat }}</strong></h4> 
+      </mat-card-content>
+    </mat-card-header>
+   <mat-card-actions>
+      <button mat-button color="warn" [routerLink]="['/plan-visita', body.kunnr ]">
+        Leer mas
+      </button>
+    </mat-card-actions>
+  </mat-card-->
+  

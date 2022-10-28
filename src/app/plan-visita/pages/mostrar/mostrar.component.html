@@ -1,0 +1,63 @@
+<div
+  fxLayout="row wrap"
+  fxLayout.xs="column"
+  fxLayoutAlign="center"
+  fxLayoutGap="20px"
+>
+  <div fxFlex="95">
+    <div
+      class="
+        row-cols-1 row-cols-md-1
+        g-4
+        mt-3
+        mb-5
+        row
+        align-items-center
+        justify-content-center
+      "
+    >
+      <app-vendedor-tarjeta
+        [codUser]="codVendedor"
+        [nameUser]="nameVendedor"
+      ></app-vendedor-tarjeta>
+      <app-maps-box></app-maps-box>
+      <!-- <app-google-maps></app-google-maps> -->
+    </div>
+    <div class="col-11">
+      <div class="bgcolor row mb-3">
+        <div fxFlex="95">
+          <div class="col">
+            <h1 class="name">Clientes a Atender en el día</h1>
+            <form (ngSubmit)="buscar()" autocomplete="off">
+              <input type="text" name="busquedad" class="form-control control-frm" [(ngModel)]="busquedad" placeholder="Buscar Cliente.."/>
+            </form>
+          </div>
+        </div>
+        <div *ngIf="hayError" class="alert alert-danger">
+          Ups! sin resultados, intenta nuevamente más tarde {{ busquedad }}
+        </div>
+
+        <div class="row mb-3">
+          <div fxFlex="95">
+            <div
+              *ngIf="!hayError"
+              class="
+                row-cols-1 row-cols-md-1
+                g-4
+                mt-2
+                mb-5
+                row
+                align-items-center
+                justify-content-center
+              "
+            >
+              <div *ngFor="let bclientes of body">
+                <app-cliente-tarjeta [body]="bclientes"></app-cliente-tarjeta>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

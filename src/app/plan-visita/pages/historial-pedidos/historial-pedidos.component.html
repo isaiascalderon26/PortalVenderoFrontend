@@ -1,0 +1,100 @@
+<div class="container">
+  <div class="row" *ngIf="!dataSource; else divCliente" class="alert alert-info">
+  </div>
+  <ng-template #divCliente>
+    <div class="col-12">
+      <app-clientes-plan-visita [body]="planVisita"></app-clientes-plan-visita>
+    </div>
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header">
+          <div class="row">
+            <div *ngFor="let column of headerTitles"
+              [ngClass]="column.id === 0 ? 'col-2 th-td-sixteen-head' : column.id === 5 ? 'col-2 th-td-eigth' : 'col-2 th-td-sixteen'">
+              {{ column.label }}
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="accordion-item item-accord row" *ngFor="let data of orderList; let i = index">
+            <div class="col-2 th-td-sixteen-body-first">
+              <span class="span-body-eigth">
+                <strong>{{ data.origin[0] }} <span *ngIf="data.sourceChannel === 'B2B'">#{{data.orderId}}</span></strong> <br>
+              </span>
+              <!--a [routerLink]="['/plan-visita/historial-pedido-detalle']" [queryParams]="{pedido: data.orderId, cliente: codigoCliente}" -->
+              <a *ngIf="data.sourceChannel === 'B2B'"  [routerLink]="['/plan-visita/historial-pedido-detalle', codigoCliente, data.orderId]">
+                <span class="details-span">
+                  Ver Detalles
+                </span>
+                <span class="material-icons icon-mat"> navigate_next </span>
+              </a>
+            </div>
+            <div class="col-2 th-td-sixteen-body" >
+              <div class="row">
+                <div class="col-12 th-td-col-2" *ngFor="let erpOrder of data.erpOrderId">
+                  {{ erpOrder }}
+                </div>
+              </div>
+            </div>
+            <div class="col-2 th-td-sixteen-body">
+              <div class="row">
+                <div class="col-12 th-td-col-2" *ngFor="let orderDate of data.orderDate">
+                  {{ orderDate | date: 'dd/MM/yy' }}
+                </div>
+              </div>              
+            </div>
+            <div class="col-2 th-td-sixteen-body">
+              <div class="row">
+                <div class="col-12 th-td-col-2" *ngFor="let deliveryDate of data.deliveryDate">
+                  {{ deliveryDate | date: 'dd/MM/yy' }}
+                </div>
+              </div> 
+            </div>
+            <div class="col-2 th-td-sixteen-body">
+              <div class="row">
+                <div class="col-12 th-td-col-2" *ngFor="let amount of data.amount">
+                  ${{ amount | number : '1.2-2' }}
+                </div>
+              </div> 
+            </div> 
+            <div class="col-2 th-td-twelve">
+              <div class="row" *ngIf="mobileDesign; else noMobile">
+                <div class="square" *ngFor="let estado of data.status" [ngStyle]="{'background-color': validateOrderStatus(estado)}" >
+                </div>
+              </div> 
+              <ng-template #noMobile>
+                <div class="row">
+                  <div *ngFor="let estado of data.status" [ngStyle]="{'color': validateOrderStatus(estado)}" >
+                    <strong>{{ status }}</strong>
+                  </div>
+                </div> 
+              </ng-template>
+            </div>         
+          </div>
+          <div class="row" *ngIf="mobileDesign" style="margin-top: 3%;">
+            <div class="col-2 width-col-2">
+              <strong>Entregado</strong>
+              <span class="row square-legend" style="background-color: green;"></span>
+            </div>
+            <div class="col-2 width-col-2">
+              <strong>En tránsito</strong>
+              <span class="row square-legend" style="background-color: #FDDA0D;"></span>
+            </div>
+            <div class="col-2 width-col-2">
+              <strong>Cancelado / Fallido </strong>
+              <span class="row square-legend" style="background-color: #e21717;"></span>
+            </div>
+            <div class="col-2 width-col-2">
+              <strong>Entrega Parcial</strong>
+              <span class="row square-legend" style="background-color: #e67010;"></span>
+            </div>
+            <div class="col-2 width-col-2">
+              <strong>Desconocido</strong>
+              <span class="row square-legend" style="background-color: grey;"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</div>

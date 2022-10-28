@@ -1,0 +1,40 @@
+<div class="container"> 
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card text-center">
+                <div class="card-header">
+                    <h1 class="header-class">Detalle Cumplimiento FDE</h1>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="chart-container">
+                                <canvas id="chart">{{ chart }}</canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" table-responsive">
+                        <table class="table">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th scope="col">Categoria</th>
+                                    <th scope="col">Cumplimiento Actual</th>
+                                    <th scope="col">Cumplimiento Categoria</th>
+                                    <th scope="col">Cumplimiento Cat Ajustado</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let data of goalsPercent">
+                                    <th scope="row">{{ data.categoria }}</th>
+                                    <td> {{ data.cumplimiento }}% </td>
+                                    <td> {{ data.cumplimientoCat }}% </td>
+                                    <td> {{ data.cumplimientoCatAjustado }}% </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

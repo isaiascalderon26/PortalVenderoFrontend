@@ -1,0 +1,133 @@
+
+@media only screen and (min-width: 6px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+  
+  .card-subtitle-main {
+    margin-top: -3.3vh;
+  }
+  .card {
+    margin-top: 3%;
+    border-radius: 17px;
+    box-shadow: 0 -0.5rem 1rem rgb(0 0 0 / 15%) !important;
+    margin-left: -1%;
+  }
+  .accordion-item {
+    margin: 1% 0% 1% 0%;
+    border-radius: 10px;
+    border: 1px solid gray;    
+    width: 104%;
+    margin-left: -2%;
+  }
+  .col-med {
+    width: 50%;
+  }
+  .col-med-imp{
+    width: 50%;
+    border-bottom: 1px solid grey;
+  }
+  .th-td-first{
+    width: 50%;
+  }
+  .th-td-last{
+    width: 100%;
+  }
+  .error-first {    
+    font-size: 11vw;
+    color: #ce2d2d;
+    margin: 3% 0% 0% 3%;
+  }
+  .error-second {    
+    font-size: 4vw;
+    margin: 2% 0% 0% 3%;
+  }
+  .error-col{
+    text-align: center;
+    margin-top: 14%
+  }
+  
+}
+  
+  @media only screen and (min-width: 600px) {
+    /* For tablets: */
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}  
+    .card {
+      margin-top: 3%;
+      border-radius: 17px;
+      box-shadow: 0 -0.5rem 1rem rgb(0 0 0 / 15%) !important;
+      width: 100%;
+      margin-left: 0%;
+    }
+    .font-table-body {
+      font-size: 100%;
+    }
+    .font-table-head {
+      font-size: 100%;
+    }
+  }
+  @media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+    .card {
+      margin-top: 3%;
+      border-radius: 17px;
+      box-shadow: 0 -0.5rem 1rem rgb(0 0 0 / 15%) !important;
+      width: 100%;
+      margin-left: 0%;
+    }
+    .accordion-item {
+      margin: 1% 0% 1% 0%;
+      border-radius: 10px;
+      border: 1px solid gray;
+      width: 100%;
+      margin-left: 0%;
+    }
+    .col-med-imp{
+      width: 50%;
+      border-bottom: 1px solid grey;
+    }
+    .th-td-first{
+      width: auto;
+    }
+    .th-td-last{
+      width: auto;
+    }
+    .error-first {    
+      font-size: 4vw;
+      color: #ce2d2d;
+      margin: 3% 0% 0% 3%
+    }
+    .error-second {    
+      font-size: 5vh;
+      margin: 2% 0% 0% 3%;
+    }
+    .error-col{
+      text-align: center;
+      margin-top: 14%
+    }
+  }
+  

@@ -1,0 +1,262 @@
+@import "../../../../styles/variales.scss";
+
+.example-container .mat-form-field + .mat-form-field {
+  margin-left: 8px;
+}
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+:host {
+  width: 100%;
+  
+}
+.logoAndina {
+  max-width: 100px;
+  width: 100%;
+  display: inline-block;
+  padding: 0 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+::ng-deep {
+  .modal-content {
+    padding: 25px;
+    border-radius: 10px;
+    border: none;
+  }
+  .modal-header {
+    padding: 0;
+    border: none;
+    .close {
+      opacity: 1;
+      padding: 0;
+      svg {
+        width: 3rem;
+        height: 3rem;
+      }
+    }
+  }
+  .modal-body {
+    padding: 0;
+    .title {
+      font-size: 18px;
+      line-height: 22px;
+      margin-bottom: 30px;
+    }
+    input,
+    select,
+    .item {
+      font-size: 16px !important;
+      line-height: 19px;
+      background-color: transparent;
+      border: none;
+      border-bottom: 1px solid #020202;
+      margin-bottom: 20px;
+      padding: 15px 0;
+      p {
+        font-size: 16px !important;
+        line-height: 19px;
+      }
+    }
+    button {
+      font-size: 16px;
+      line-height: 19px;
+    }
+    .actions {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      button,
+      .link {
+        width: 50%;
+        font-size: 18px;
+        line-height: 22px;
+        text-align: center;
+      }
+      .link {
+        font-family: $font-bold;
+      }
+    }
+  }
+  .dropdown-toggle::after {
+    border: none;
+  }
+  .dropup .dropdown-toggle::after {
+    border: none;
+  }
+}
+
+.nav {
+  background-color: $black;
+  ::ng-deep {
+    .navbar {
+      background-color: $black;
+    }
+  }
+}
+.home {
+  height: calc(100vh - 58px);
+  background-color: $light-grey;
+  padding: 3rem 2rem;
+  @media (max-width: $lg) {
+    height: calc(100vh - 114px);
+    background-color: $light-grey;
+  }
+  @supports (-webkit-touch-callout: none) {
+    @media only screen and (-webkit-min-device-pixel-ratio: 1) and (max-resolution: 199dpi) {
+      margin-top: 0 !important;
+      margin-bottom: 20pt !important;
+    }
+    @media only screen and (-webkit-min-device-pixel-ratio: 1) and (min-resolution: 200dpi) {
+      margin-top: 40pt !important;
+      margin-bottom: 30pt !important;
+    }
+    height: calc(100vh - 160px);
+  }
+  .title {
+    font-family: $font-bold;
+    font-size: 2.2rem;
+    line-height: 2.4rem;
+    color: $dark;
+    margin-bottom: 0;
+    @media (max-width: $lg) {
+      font-size: 18px;
+      line-height: 20px;
+    }
+  }
+  .link {
+    svg {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+  }
+  .profile {
+    img {
+      border-radius: 100%;
+      max-width: 15rem;
+    }
+    .name {
+      font-family: $font-bold;
+      margin-left: 3rem;
+      font-size: 2.2rem;
+      line-height: 2.4rem;
+      margin-bottom: 0;
+      text-align: center;
+    }
+  }
+  .card {
+    @media (max-width: $lg) {
+      padding: 1.5rem !important;
+    }
+    .title {
+      margin-bottom: 3rem;
+      @media (max-width: $lg) {
+        margin-bottom: 1.5rem;
+      }
+    }
+    .link {
+      font-size: 1.8rem;
+      line-height: 2.2rem;
+      color: $blue;
+      margin-bottom: 0;
+      cursor: pointer;
+      &:active {
+        outline: none;
+      }
+    }
+    .item {
+      border-top: 1px solid #dddddd;
+      padding: 15px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      &:last-child {
+        border-bottom: 1px solid #ddd;
+      }
+      p {
+        font-size: 16px;
+        line-height: 19px;
+      }
+      .more-actions {
+        width: 10%;
+        text-align: center;
+      }
+    }
+    .dropup {
+      background-color: transparent;
+      border: none;
+      outline: none;
+      .dropdown-menu {
+        padding: 2rem;
+      }
+      .dropdown-item {
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+        padding: 1.3rem;
+        &:not(:last-child) {
+          border-bottom: 1px solid $dark-grey;
+        }
+        &:active {
+          background-color: transparent;
+          outline: none;
+          color: $dark;
+        }
+      }
+    }
+    select,
+    option {
+      background-color: transparent;
+      border: none;
+      outline: none;
+    }
+    tr {
+      th {
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+        font-family: $font-bold;
+        padding: 1.2rem;
+      }
+      td {
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+        border-top: 1px solid #ce2d2d;
+        padding: 1.5rem;
+        svg {
+          width: 2rem;
+          height: 2rem;
+        }
+        @media (max-width: $lg) {
+          font-size: 12px;
+          line-height: 14px;
+          width: 100%;
+        }
+      }
+      &:last-child {
+        td {
+          border-bottom: 1px solid #ddd;
+        }
+      }
+    }
+  }
+}
+.control-frm {
+  border-radius: 14px 14px 14px 14px;
+  height: 6vh;
+  border-bottom: 5px outset #1a1a1a;
+}
+
+.error-first {
+  font-size: 14vh;
+  color: #ce2d2d;
+}
+.error-second {
+  margin-top: 7vh;
+  font-size: 5vh;
+}

@@ -1,0 +1,229 @@
+.chart-container {
+  position: relative;    
+  // height: 40vh;
+  width: 50%;
+  margin: -10% 0% -2% 26%;
+  z-index: -1;
+}
+.chart-container-ice {    
+  position: relative;
+  height: 35vh;
+  width: 100%;
+}
+.header-class{
+  margin-top: 4%;
+  text-align: center;
+}
+.table thead th {
+  vertical-align: middle;
+  text-align: center;
+}
+.table tbody td {
+  text-align: center;
+  vertical-align: middle;
+}
+.table tbody th {
+  text-align: center;
+  vertical-align: middle;
+}
+.table {
+  border-color: white;
+}
+.card {
+  margin-top: 3%;
+  margin-left: -1.3%;
+  border-radius: 17px;
+  width: 102.3%;
+  box-shadow: 0 -0.5rem 1rem rgb(0 0 0 / 15%) !important;
+  overflow: hidden;
+}
+.card-header {
+  border-radius: 17px 17px 0px 0px;
+}
+.card-body {
+  z-index: 1;
+}
+.zero-SSD {
+  margin: -16% 0% 0% -34%;
+  color: white;
+  font-size: 100%;
+  z-index: 2;
+}
+.goal-SSD {
+  margin: -4% 0% 1% 39%;
+  z-index: 1;
+  color: white;
+  font-size: 100%;
+}
+.selled-SSD {
+  margin-left: 1.3%;
+  font-size: 100%;
+}
+.categorie-SSD {
+  margin-left: 3%;
+}
+.col-6 {
+  padding-top: 30px;
+}
+.header-class-at {
+  margin-top: 0%;
+  text-align: center;
+}
+.chart-pie {    
+  position: relative;
+  width: 43%;
+  margin: 0% 0% 11% 22%;
+  z-index: -1;
+}
+.square-1 {  
+  height: 4vh;
+  width: 2vw;
+  background-color: #9a1e18;
+}
+.square-2 {  
+  height: 4vh;
+  width: 2vw;
+  background-color: Orange;
+}
+.square-3 {  
+  height: 4vh;
+  width: 2vw;
+  background-color: #008000
+}
+.square-4 {  
+  height: 4vh;
+  width: 2vw;
+  background-color: #d0d538;
+}
+.square-cat {    
+  margin: -7% 0% 0% -32%;
+  padding-bottom: 5%;
+  text-align: left;
+}
+.table-marging {
+  margin-left: -50%;
+  margin-top: 13%;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+  .chart-container {
+    position: relative;    
+    // height: 40vh;    
+    width: 100%;
+    margin-left: 0%;
+    margin-top: -23%;
+  }  
+  .zero-SSD {
+    display: none;
+  }
+  .goal-SSD {
+    margin-top: -20%;
+    display: none;
+  }  
+  .selled-SSD {
+    margin-left: -3.5%;
+    font-size: 100%;
+    color: black;
+    padding: 1px 0px 0px 0px;
+  }
+  .categorie-SSD {
+    margin-left: -3%;
+  }
+  .table-marging {    
+    margin-left: -145%;
+    margin-top: -45%;
+    font-size: 1.9vh;
+  }  
+  .square-1 {
+    height: 2.7vh;
+    width: 3.5vw;
+    background-color: Orange;
+  }
+  .square-2 {  
+    height: 2.7vh;
+    width: 3.5vw;
+    background-color: #9a1e18;
+  }
+  .square-3 {  
+    height: 2.7vh;
+    width: 3.5vw;
+    background-color: #008000
+  }
+  .square-4 {  
+    height: 2.7vh;
+    width: 3.5vw;
+    background-color: #d0d538;
+  }
+  .chart-pie {    
+    position: relative;
+    width: 43%;
+    margin: 0% 0% 11% 4%;
+    z-index: -1;
+  }
+
+  @media only screen and (min-width: 412px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+      width: 100%;
+    }
+    .chart-container {
+      position: relative;    
+      // height: 40vh;    
+      width: 100%;
+      margin-left: 0%;
+      margin-top: -23%;
+    }  
+    .zero-SSD {
+      display: none;
+    }
+    .goal-SSD {
+      margin: -24% 0% 2% 73%;
+      display: none;
+    }  
+    .selled-SSD {
+      margin-left: -2.5%;
+      font-size: 2vh;
+      color: black;
+      padding: 1px 0px 0px 0px;
+    }
+    .categorie-SSD {
+      margin-left: -3%;
+    }
+    .table-marging {    
+      margin-left: -145%;
+      margin-top: -45%;
+      font-size: 1.9vh;
+    }  
+    .square-1 {
+      height: 2.7vh;
+      width: 3.5vw;
+      background-color: Orange;
+    }
+    .square-2 {  
+      height: 2.7vh;
+      width: 3.5vw;
+      background-color: #9a1e18;
+    }
+    .square-3 {  
+      height: 2.7vh;
+      width: 3.5vw;
+      background-color: #008000
+    }
+    .square-4 {  
+      height: 2.7vh;
+      width: 3.5vw;
+      background-color: #d0d538;
+    }
+    .chart-pie {    
+      position: relative;
+      width: 43%;
+      margin: 0% 0% 11% 4%;
+      z-index: -1;
+    }
+
+  }
+}

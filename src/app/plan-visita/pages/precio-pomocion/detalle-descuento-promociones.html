@@ -1,0 +1,22 @@
+<h2 mat-dialog-title><strong>Descuento clickeable</strong></h2>
+<mat-dialog-content class="mat-typography">
+  <div>
+    <p>
+      <strong>{{data.body[data.index].detail}}</strong><br />{{data.body[data.index].name}}
+    </p>
+    <p><strong>Vigencia de Promoción</strong><br />{{data.body[data.index].validityTo | date:'dd/MM/yyyy'}}</p>
+    <p><strong>Precio máximo Sugerido</strong><br />{{data.body[data.index].limitPrice}}</p>
+    <p><strong>Porcentaje de descuento</strong><br />15%</p>
+  </div>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button class="btn btn-dark align-items-center justify-content-center" mat-button [mat-dialog-close]="true"
+    cdkFocusInitial>
+    Aceptar
+  </button>
+</mat-dialog-actions>
+
+<!-- Copyright 2020 Google LLC. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at http://angular.io/license -->

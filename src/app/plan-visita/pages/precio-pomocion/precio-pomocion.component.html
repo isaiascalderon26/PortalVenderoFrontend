@@ -1,0 +1,60 @@
+<div fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="center" fxLayoutGap="20px">
+  <div *ngIf="!noData; else noDataContainer">
+    <div *ngIf="discount" class="col-md-12 card">
+      <div class="card-title" style="cursor:pointer;" (click)="clickeables(false)">
+        <h2 class="text-center"><strong>Descuentos clickeables del cliente</strong></h2>
+      </div>
+    </div>
+    <div *ngIf="!discount">
+      <div class="col-md-12 card">
+        <div class="card-subtitle">
+          <h2 class="text-center"><strong>Promociones vigentes para este cliente.</strong></h2>
+        </div>
+        <!-- <mat-card class="mb-2 mt-4">
+                    <mat-checkbox class="mb-4" [checked]="allComplete" [indeterminate]="someComplete()" (change)="bulk($event.checked)">
+                      <div for="activar1">
+                        <strong>Activar todas</strong>
+                      </div>
+                    </mat-checkbox> 
+                  </mat-card>-->
+        <div class="card-body">
+          <!-- Definición de Negocio el checkbox funciona en buen estado, activar luego de tener definición -->
+          <!-- <mat-checkbox class="mb-5" (change)="detailDiscount(i, $event)" [(ngModel)]="item.active" (ngModelChange)="updateAllComplete()">
+                      <div class="styleletter text-wrap">
+                        <strong> {{item.detail}} {{item.name}} </strong>
+                      </div>
+                    </mat-checkbox> -->
+          <div class="accordion-item row" *ngFor="let item of itemList; let i = index;">
+            <div class="col-12 styleletter text-wrap">
+              <strong> {{item.detail}} {{item.name}} </strong>
+            </div>
+            <!--     <div *ngIf="!item.active">
+                      <h4>
+                        <label for="">Justicación de la baja</label><br>
+                        {{motiveList[i]}}
+                      </h4>
+                    </div> -->
+          </div>
+        </div>
+        <!-- <a class="button" routerLink="promotion/:kunnr">Volver</a> -->
+      </div>
+      <div class="text-center">
+        <button class="save_button" (click)="clickeables(true)">
+          Volver
+        </button>
+      </div>
+    </div>
+  </div>
+  <ng-template #noDataContainer>
+    <div class="col-md-12 card">
+      <div class="card-subtitle">
+        <h1 class="text-center">¡Lo sentimos! el cliente no posee promociones vigentes</h1>
+      </div>
+    </div>
+    <div class="text-center">
+      <button class="save_button2" (click)="clickeables(true)">
+        Volver
+      </button>
+    </div>
+  </ng-template>
+</div>

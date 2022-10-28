@@ -1,0 +1,53 @@
+<div class="container"> 
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card text-center">
+                <div class="card-header">
+                    <h1 class="header-class">Detalle Cumplimiento por Volumen</h1>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="chart-container-ice">
+                                <canvas id="canvasIce">{{ iceChart }}</canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="chart-container">
+                                <canvas id="canvas">{{ chart }}</canvas>
+                            </div>
+                        </div>      
+                    </div>
+                    <div class=" table-responsive">
+                        <table class="table">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th scope="col">Categoria</th>
+                                    <th scope="col">Meta</th>
+                                    <th scope="col">Venta Actual</th>
+                                    <th scope="col">Porcentaje Cumplimiento</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let data of goalsPercent">
+                                    <th scope="row">{{ data.categoria }}</th>
+                                    <td *ngIf="data.unidad === 'IN'; else ucBlockGoal"> ${{ data.meta }} </td>
+                                    <ng-template #ucBlockGoal>
+                                        <td>{{ data.meta }}</td>
+                                    </ng-template>
+                                    <td *ngIf="data.unidad === 'IN'; else ucBlockCurr"> ${{ data.ventaActual}} </td>
+                                    <ng-template #ucBlockCurr>
+                                        <td>{{ data.ventaActual }}</td>
+                                    </ng-template>
+                                    <td> {{ data.cumplimiento }}% </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

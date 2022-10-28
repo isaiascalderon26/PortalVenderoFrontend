@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row" *ngIf="!planVisita; else divCliente" class="alert alert-info">
+  </div>
+    <ng-template #divCliente>
+      <div class="col-md-12">
+        <app-clientes-plan-visita [body]="planVisita"></app-clientes-plan-visita>
+      </div>
+      <div class="col-md-12">  
+        <div class="card">  
+          <div class="card-body">
+            <h2 class="card-title"><strong>Datos Cliente</strong></h2>
+            <h3 class="card-subtitle" *ngIf="planVisita.text1 !== ''">Nombre:<strong></strong></h3>
+            <h3 class="card-subtitle card-subtitle-main" *ngIf="planVisita.telf1 !== ''">Télefono:<strong> {{ planVisita.telf1 }} </strong></h3>
+            <h3 class="card-subtitle card-subtitle-main" *ngIf="planVisita.zterm !== ''">Emáil:<strong></strong></h3>
+            <h3 class="card-subtitle card-subtitle-main" *ngIf="planVisita.mcod3 !== ''">Dirección:<strong> {{ planVisita.mcod3 }} </strong></h3>
+          </div>
+        </div>  
+      </div>
+    </ng-template>
+
+</div>

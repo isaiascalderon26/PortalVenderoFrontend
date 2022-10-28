@@ -1,0 +1,69 @@
+
+    <div class=" login-form row align-items-center justify-content-center">
+      <br>
+      <br>
+      <div fxFlex="100">
+        <div
+          class="
+            row-cols-1 row-cols-md-1
+            g-4
+            mt-2
+            mb-5
+            row
+            align-items-center
+            justify-content-center
+          "
+        >
+    <div class="row">
+      <mat-card *ngIf="normalLogin">
+        <mat-card-content>  
+          <h1>Portal Vendedor</h1>        
+          <form >
+            <br>
+            <br>
+            <div>
+              <button (click)="onLoginClick()" type="submit" class="btn btn-danger" >Login</button>
+            </div>
+            <br>
+            <br>
+          </form> 
+          <!--div class="col-12">
+            <label class="label-no-mail">Si no posees correo corporativo</label> 
+            <button (click)="showNewLogin(false)"  class="btn btn-link btn-link">Ingreso con usuario y password</button>
+          </div-->
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div class="row">
+      <mat-card *ngIf="!normalLogin">
+        <mat-card-content>  
+          <h1>Portal Vendedor</h1>        
+          <form [formGroup]="form" (ngSubmit)="onSubmit()">
+            <div class="form-floating mb-3">
+              <input type="email" class="form-control" id="floatingInput" placeholder="Usuario" formControlName="username" [ngClass]="{ 'is-invalid': submitted && f.username.errors }">
+              <label for="floatingInput">Usuario</label>
+            <div *ngIf="f.username.errors" class="invalid-feedback">
+              <div *ngIf="f.username.errors.required">
+                Llenar usuario
+              </div>              
+            </div>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="password" class="form-control" id="floatingPassword" placeholder="Contraseña" formControlName="password">
+            <label for="floatingPassword">Contraseña</label>
+          </div>
+          <br>
+            <button type="submit" class="btn btn-danger">Ingresar</button>
+          </form> 
+          <div class="col-12">
+            <label class="label-no-mail">Si cuentas con correo corporativo</label> 
+          </div>
+          <div class="col-12">
+            <button (click)="showNewLogin(true)"  class="btn btn-link btn-link">Ingreso con correo corporativo</button>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>
+</div>
